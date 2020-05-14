@@ -1,0 +1,59 @@
+
+Diretório do projeto:
+	cd Roteador\src\main\java\backend
+
+Execução do programa:
+	mvn package && java -jar target/gs-spring-boot-0.1.0.jar
+
+Collections do Postman:
+	Consulta de um roteiro
+		localhost:8080/roteiros/GRU-CDG
+	Inserção de um roteiro
+		localhost:8080/roteiros/AAA,ZZZ,99/insert
+	Consulta do roteiro inserido acima
+		localhost:8080/roteiros/AAA-ZZZ
+
+Swagger:
+	http://localhost:8080/v2/api-docs 
+	http://localhost:8080/swagger-ui.html
+
+Estrutura:
+	src/main/java
+		Beans
+			MBean.java
+		Controller
+			Application.java
+			Controller.java
+		DTO
+			Point.java
+			Route.java
+		Resource
+			input-routes.csv
+			input-routes-original.csv
+
+Comentários:
+
+	Acho a estrutura MVC bem organizada e atende bem qualquer necessidade.
+	
+	O algorítmo de Floyd-Warshall é simples, robusto e normalmente utilizado para 
+soluções computacionais que buscam pelo caminho mais curto em grafos com
+vértices ponderados. Particularmente acho interessante que com ele é possível 
+calcular de antemão todas as rotas possíveis, deixando para a pesquisa só pegar o
+resultado já calculado anteriormente.
+
+	Tiveram que ser feitas duas interfaces conforme pedido, uma terminal texto e
+outra rest utilizando spring boot que é a ferramenta de mercado mais utilizada no
+momento.
+
+	Os testes abordam todas as funcionalidades requeridas.
+	
+	Obrigado pela oportinudade.
+	Mauricio
+	11 9 8661-1116
+
+
+Bibliografia: 
+	https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm#Pseudocode_[11]
+	
+	
+	
